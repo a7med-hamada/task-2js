@@ -1,0 +1,197 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: 'Poppins', sans-serif;
+    background-color: hsl(0, 0%, 89%);
+    color: hsl(0, 0%, 18%);
+}
+.container{
+    width: 80%;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+}
+.navbar{
+    background-color: hsla(0, 0%, 18%, 0.764);
+    color: white;
+    padding: 10px;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    height: 80px;   
+}
+#items{
+    width: 80%;
+    display: flex;
+    justify-content: space-between;
+    margin: 100px auto 0 auto;
+}
+
+#items div {
+    border: 2px solid hsl(0, 0%, 0%);
+    padding: 20px;
+    border-radius: 10px;
+    width: 24%;
+    text-align: center;
+    transition: .3s;
+    background-color: white;
+}
+#items div:hover{
+    transform: translatey(-.4rem);
+    box-shadow: 0 0 10px hsl(0, 0%, 0%);
+}
+#items div h2 , #items div p{
+    margin-bottom: 15px;
+}
+#clear{
+    display: none;
+}
+#content{
+    position: fixed;
+    top: 0;
+    left: 0px;
+    width: 300px;
+    display: none;
+    text-align: center;
+    background-color: rgba(83, 83, 83, 0.928);
+    z-index: 2;
+    padding: 20px 0;
+    font-size: 0;
+    height: 100vh;
+    color: white;
+    transition: .7s;
+    overflow: auto;
+}
+.box-search{
+    width: 75%;
+}
+#search{
+    width: 100%;
+    padding: 10px;
+    border-radius: 10px;
+    border: 2px solid hsl(0, 0%, 27%);
+}
+ #clear , .buy-all{
+    display: block;
+    margin: 5px auto 0 auto;
+    width: 200px;
+    cursor: pointer;
+    padding: 10px;
+    background-color: hsl(0, 0%, 0%);
+    color: white;
+    border-radius: 10px;
+    text-align: center;
+}
+#closeshop{
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 30px;
+    cursor: pointer;
+}
+.buy-all{
+    display: none;
+}
+.title-content{
+    margin: 20px 0;
+    font-size: 0px;
+}
+.hr{
+    width: 0%;
+    margin: 0 auto;
+}
+.Purchase-number{
+    background-color: hsl(0, 0%, 0%);
+    color: white;
+    padding: 10px;
+    width: 300PX;
+    text-align: center;
+    margin: 20px auto;
+    border-radius: 10px;
+}
+.box-total{
+    width: fit-content;
+}
+.totalprice{
+    width: 100%;
+}
+.icons{
+    font-size: 25px;
+}
+.icons i{
+    margin: 0 7px;
+    cursor: pointer;
+    transition: .4s;
+}
+.icons i:hover{
+    scale: 1.1;
+    color: hsl(0, 0%, 78%);
+}
+#openshop{
+    position: relative;
+}
+#openshop span{
+    content: "0";
+    position: absolute;
+    bottom: -15px;
+    right: -15px;
+    font-size: 15px;
+    background-color: hsl(0, 0%, 48%);
+    padding: 5px;
+    border-radius: 50%;
+}
+#notfound{
+    color: red;
+    font-size: 30px;
+    margin: auto;
+    display: none;
+    text-align: center;
+}
+#purchased-items{
+    line-height: 35px;
+    margin-top: 10px;
+}
+@media (max-width: 600px) {
+    #items{
+        width: 100%;
+        flex-direction: column;
+        align-items: center;
+    }
+    .box-search {
+        width: 50%;   
+    }
+    #items div {
+        width: 80%;
+        margin-top: 30px;
+    }
+    #content{
+        width: 100%;
+        height: 100vh;
+    }
+    hr {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+}
+@media (max-width: 900px) {
+    #items {
+        width: 100%;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #items div {
+        width: 80%;
+        margin-top: 30px;
+    }
+
+    hr {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+}
